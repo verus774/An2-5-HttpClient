@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from './../shared/shared.module';
 import { UsersServicesModule } from './users-services.module';
+import { UsersAPIProvider } from './users.config';
 
 import {
   UsersRoutingModule,
@@ -19,6 +20,9 @@ import { UserComponent } from './components';
     UsersRoutingModule,
     UsersServicesModule
   ],
-  declarations: [usersRouterComponents, UserComponent]
+  declarations: [usersRouterComponents, UserComponent],
+  providers: [
+    UsersAPIProvider
+  ]
 })
 export class UsersModule {}
